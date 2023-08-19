@@ -1,5 +1,4 @@
 var mergeAlternately = function(word1, word2) {
-
     var alternative_string = new String();
 
     for (let i = 0; i < word1.length; i++){

@@ -1,4 +1,5 @@
 const isValid = s => {
+
 	const symbols = {
 
 		'[': ']',
@@ -6,7 +7,6 @@ const isValid = s => {
 		'{': '}',
 
 	}
-	
 	const stack = [];
 
 	for (const char of s) {
