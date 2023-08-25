@@ -18,6 +18,7 @@ const romanToInt = (s) =>  {
 	let left = 0;
 	let right = left + 1;
 	var count = 0;
+
 	while (left < s.length	) {
 
 		const twoNums = numerals[s[left] + s[right]];
