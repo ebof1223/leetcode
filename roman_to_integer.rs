@@ -4,6 +4,7 @@ impl Solution {
     pub fn roman_to_int(s: String) -> i32 {
     
         let mut numerals = HashMap::new();
+
         numerals.insert(String::from("I"), 1);
         numerals.insert(String::from("V"), 5);
         numerals.insert(String::from("X"), 10);
@@ -11,7 +12,6 @@ impl Solution {
         numerals.insert(String::from("C"), 100);
         numerals.insert(String::from("D"), 500);
         numerals.insert(String::from("M"), 1000);
-
 
         numerals.insert(String::from("IV"), 4);
         numerals.insert(String::from("IX"), 9);
@@ -26,6 +26,7 @@ impl Solution {
         let mut count = 0;
     
         while left < s.len() {
+
             let mut pair = String::new();
             pair.push(s.chars().nth(left).unwrap());
             pair.push(s.chars().nth(right).unwrap());
@@ -36,12 +37,12 @@ impl Solution {
             right += 1;
 
             } else {
-							let c = s.chars().nth(left).unwrap();
                 count += numerals.get(&c).unwrap();
             }
 
             left += 1;
             right += 1;
+            
             }
 		return count;
     }
