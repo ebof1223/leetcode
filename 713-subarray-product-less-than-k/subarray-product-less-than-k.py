@@ -6,9 +6,9 @@ class Solution:
     left = ans = 0
     curr_prod = 1
 
-    for right in range(len(nums)):
+    for right, val in enumerate(nums):
     
-     curr_prod *= nums[right]
+     curr_prod *= val
 
      while curr_prod >= k:
         curr_prod //= nums[left]
