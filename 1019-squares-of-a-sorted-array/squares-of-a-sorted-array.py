@@ -12,5 +12,4 @@ class Solution:
                 ans.append(l_sq)
                 l +=1
 
-        ans.reverse()
-        return ans
+        return ans[::-1]
