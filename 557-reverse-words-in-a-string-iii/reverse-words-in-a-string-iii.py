@@ -1,14 +1,15 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
         arr = s.split()
-        ans = ''
+        ans = list()
+
         for w in range(len(arr)):
+            word_arr = list()
             for c in range(len(arr[w]) - 1,-1,-1):
-                ans += arr[w][c]
+                word_arr.append(arr[w][c])
             
-            if w == len(arr) - 1:
-                break
-            ans += ' '
+            ans.append(''.join(word_arr))
+       
 
-        return ans
-
+        
+        return ' '.join(ans)
